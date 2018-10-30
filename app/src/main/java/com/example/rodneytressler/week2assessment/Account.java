@@ -23,13 +23,11 @@ public class Account implements Parcelable {
     public Account(String name, String emailAddress) {
         this.name = name;
         this.emailAddress = emailAddress;
-
     }
 
     protected Account(Parcel in) {
         name = in.readString();
         emailAddress = in.readString();
-
     }
 
     @Override
@@ -41,7 +39,6 @@ public class Account implements Parcelable {
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeString(name);
         dest.writeString(emailAddress);
-
     }
 
     public static final Parcelable.Creator<Account> CREATOR = new Parcelable.Creator<Account>() {
