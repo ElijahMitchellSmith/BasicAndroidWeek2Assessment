@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
     private WelcomeFragment welcomeFragment;
     public static final String ACCOUNT_INFO = "account_info";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.button_register)
     protected void getAccountInformation() {
-        if (nameEdit.getText().toString().isEmpty() || emailEdit.getText().toString().isEmpty()) {
+        boolean isNameEmpty = nameEdit.getText().toString().isEmpty();
+        boolean isEmailEmpty = emailEdit.getText().toString().isEmpty();
+
+        if (isNameEmpty || isEmailEmpty) {
             toastRegistrationFailure();
         } else {
             String userFirstName = nameEdit.getText().toString();
@@ -43,11 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_holder, welcomeFragment).commit();
 
-
             Bundle bundle = new Bundle();
             bundle.putParcelable(ACCOUNT_INFO, account);
             welcomeFragment.setArguments(bundle);
-
         }
     }
 }

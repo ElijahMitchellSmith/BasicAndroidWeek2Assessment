@@ -6,11 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.rodneytressler.week2assessment.MainActivity">
 
-
-
     <EditText
         android:textColor="@android:color/black"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/view_medium_margin"
         android:hint="Enter Name"
         android:id="@+id/input_name"
         app:layout_constraintBottom_toTopOf="@id/button_register"
@@ -22,7 +20,7 @@
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@id/button_register"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/view_medium_margin"
         android:hint="Enter Email"
         android:id="@+id/input_email"
         android:layout_width="wrap_content"
@@ -40,15 +38,12 @@
         android:id="@+id/fragment_holder"
         android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/view_medium_margin"
+        android:layout_marginStart="@dimen/view_medium_margin"
+        android:layout_marginTop="@dimen/view_medium_margin"
         android:elevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </FrameLayout>
-
-
 </android.support.constraint.ConstraintLayout>
